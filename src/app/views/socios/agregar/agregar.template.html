@@ -1,0 +1,259 @@
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Agregar Socio</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Tablero</a>
+            </li>
+            <li class="active">
+                <a>Socios</a>
+            </li>
+            <li class="active">
+                <strong>Agregar socio</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2 w3-center w3-padding-16">
+        <!--<button class="btn btn-primary dim" (click)="eliminar()" >
+            <i class="fa fa-plus"></i> Agregar
+        </button>-->
+    </div>
+</div>
+<div class="w3-container w3-padding-16 ibox-tools">
+    <button class="btn btn-danger dim" [routerLink]="['/tabla_socio']">
+        <i class="fa fa-arrow-left"></i> Regresar
+    </button>
+    <button class="btn btn-primary dim" (click)="agregar()">
+        <i class="fa fa-plus"></i> Agregar
+    </button>
+</div>
+<div class="row">
+    <!--Izquierdo-->
+    <div class="col-md-6">
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <!--<div class="ibox-tools">
+                            <button class="btn btn-danger dim" [routerLink]="['/tabla_socio']">
+                                <i class="fa fa-arrow-left"></i> Regresar
+                            </button>
+                        </div>-->
+                        <div class="ibox-title w3-blue">
+                            <h5><i class="fa fa-user"></i> Detalles</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Nombre</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-bars"></i></span> <input type="text" placeholder="Nombre" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Apellido Paterno</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-bars"></i></span> <input type="text" placeholder="Apellido Paterno" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Apellido Materno</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-bars"></i></span> <input type="text" placeholder="Apellido Materno" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Genero</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control m-b" name="account">
+                                            <option></option>
+                                            <option>opcion 1</option>
+                                            <option>opcion 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-3 control-label">Fecha Nacimiento</label>
+                                    <div class="col-sm-9">
+                                        <div class="form-group" id="nacimiento">
+                                            <div class="input-group date">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="10/11/2013">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Nota</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-sticky-note"></i></span> <textarea row="5" placeholder="Nota" class="form-control"></textarea></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title w3-purple">
+                            <h5><i class="fa fa-info-circle"></i> Detalles adicionales</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div class="form-group"><label class="col-sm-2 control-label">Direccion</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-map-marker"></i></span> <input type="text" placeholder="Direccion" class="form-control"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Derecho-->
+    <div class="col-md-6">
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title w3-green">
+                            <h5><i class="fa fa-user"></i> Contacto</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-at"></i></span> <input type="text" placeholder="Email" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Celular</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-mobile"></i></span> <input type="text" placeholder="Celular" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Casa</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-phone"></i></span> <input type="text" placeholder="Casa" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Trabajo</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-phone"></i></span> <input type="text" placeholder="Trabajo" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Ocupacion</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-briefcase"></i></span> <input type="text" placeholder="Ocupacion" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Empresa</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-building"></i></span> <input type="text" placeholder="Organizacion" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Direccion</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-map-marker"></i></span> <input type="text" placeholder="Direccion" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title w3-red">
+                            <h5><i class="fa fa-plus-square"></i> Contacto de emergencia</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Nombre</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-mobile"></i></span> <input type="text" placeholder="Nombre" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-at"></i></span> <input type="text" placeholder="Email" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Celular</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-mobile"></i></span> <input type="text" placeholder="Celular" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Casa</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-phone"></i></span> <input type="text" placeholder="Casa" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Trabajo</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group m-b"><span class="input-group-addon"><i class="fa fa-phone"></i></span> <input type="text" placeholder="Trabajo" class="form-control"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-sm-2 control-label">Relacion</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control m-b" name="account">
+                                            <option></option>
+                                            <option>opcion 1</option>
+                                            <option>opcion 2</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
